@@ -2,6 +2,7 @@ const billInput = document.querySelector(".bill-input");
 const submitBtn = document.querySelector(".submit-btn");
 const tipAmountBtns = document.querySelectorAll(".tip-btn");
 const guestNumber = document.querySelector(".select-guests");
+const optionGuest = document.querySelector(".option-guests");
 const tipResult = document.querySelector(".tip-result");
 const totalResult = document.querySelector(".total-result");
 
@@ -22,7 +23,7 @@ const calculateTip = (event) => {
   tipMultiplier = document.querySelector(".tip-btn.active").value;
   if (isNaN(amount) || amount <= 0 || !tipMultiplier) {
     return alert("Please enter a valid number and select a tip percentage.");
-  } else {
+  } else if ((optionGuest.value = 1)) {
     let tip = amount * tipMultiplier;
     let total = amount + tip;
     tipResult.insertAdjacentHTML("beforeend", `<p>${tip.toFixed(2)}</p>`);
@@ -32,3 +33,11 @@ const calculateTip = (event) => {
 };
 
 submitBtn.addEventListener("click", calculateTip);
+
+/* LEFT TO DO: 
+    FINISH CALCULATE TIP FUNCTION WITH DIFFERENT GUEST NUMBERS;
+    ADD HIDDEN DIV WHICH DISPLAYS WHEN YOU SELECT MORE THAN ONE GUEST;
+    IN THIS DIV DISPLAYS THE AMOUNT EACH PERSON PAYS;
+    ADD CUSTOM TIP FUNCTIONALITY;
+    REMOVE ACTIVE CLASS FROM BUTTONS WHEN CLICKING OFF THEM;
+*/
