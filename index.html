@@ -29,24 +29,25 @@
         </select></label
       >
       <div class="tip-container">
-        <label for="tip-size">Enter your tip percentage:</label>
+        <label for="tip-size">How much would you like to tip?</label>
         <div class="btn-container">
-        <button class="tip-btn">5%</button>
-        <button class="tip-btn">10%</button>
-        <button class="tip-btn">15%</button>
-        <button class="tip-btn">20%</button>
+        <button type="button" class="tip-btn" value="0.05">5%</button>
+        <button type="button" class="tip-btn" value="0.1">10%</button>
+        <button type="button" class="tip-btn" value="0.15">15%</button>
+        <button type="button" class="tip-btn" value="0.2">20%</button>
         </div>
         <label for="custom" id="custom"
-          >Enter a custom percentage: <input type="number"
+          >Enter a custom percentage: <input type="number" id="custom" class="custom-input"
         /></label>
       </div>
 
-      <button type="submit">Calculate Tip</button>
+      <button type="submit" class="submit-btn">Calculate Tip</button>
     </form>
 
     <div class="results-container">
       <div class="tip-result">Your Tip:</div>
-      <div class="total">Your Total:</div>
+      <div class="total-result">Your Total:</div>
     </div>
   </body>
+  <script type="module" src="script.js"></script>
 </html>

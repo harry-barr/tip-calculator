@@ -54,6 +54,7 @@ input::-webkit-inner-spin-button {
   background-color: aliceblue;
   height: 50px;
   border-radius: 10px;
+  color: black;
 }
 
 .tip-container {
@@ -75,9 +76,64 @@ input::-webkit-inner-spin-button {
 
 .tip-container .btn-container .tip-btn {
   padding: 50px;
-  border-radius: 45%;
+  border-radius: 47%;
+  font-weight: 700;
+  font-size: 2rem;
+  background-color: aliceblue;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.tip-container .btn-container .tip-btn:hover {
+  border: 4px solid #019f55;
+}
+
+.active {
+  background-color: #07517e !important;
+  border: 4px solid #019f55 !important;
+  color: #019f55 !important;
 }
 
 .tip-container #custom {
   font-size: 1.5rem;
+}
+.tip-container #custom .custom-input {
+  background-color: aliceblue;
+  border: none;
+  border-radius: 15px;
+  height: 45px;
+  text-align: center;
+}
+
+form .submit-btn {
+  margin: 50px;
+  padding: 30px;
+  background-color: aliceblue;
+  border-radius: 30px;
+  color: black;
+  font-weight: 600;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+form .submit-btn:hover {
+  border: 4px solid #019f55;
+}
+
+.results-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.results-container .tip-result,
+.results-container .total-result {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
