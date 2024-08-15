@@ -1,0 +1,83 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #002339;
+  color: #019f55;
+}
+
+.title {
+  position: relative;
+  margin: 30px;
+}
+.title h1 {
+  font-weight: 700;
+  padding: 30px;
+  font-size: 3rem;
+}
+
+.title .line {
+  background-color: #019f55;
+  height: 3px;
+  border: none;
+  border-radius: 3px;
+}
+
+.tip-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#bill-amount,
+#guests,
+.tip-container {
+  margin: 10px;
+  font-size: 2rem;
+}
+
+.bill-input {
+  background-color: aliceblue;
+  border: none;
+  border-radius: 15px;
+  height: 45px;
+  text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.select-guests {
+  background-color: aliceblue;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.tip-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.tip-container .btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 120px;
+  margin: 50px;
+}
+
+.tip-container .btn-container .tip-btn {
+  padding: 50px;
+  border-radius: 45%;
+}
+
+.tip-container #custom {
+  font-size: 1.5rem;
+}

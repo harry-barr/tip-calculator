@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="viewport" width="device-width initial-scale=1" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="title">
+      <h1>Tip Calculator</h1>
+      <hr class="line"></hr>
+    </div>
+    <form class="tip-form">
+      <label for="bill-amount" id="bill-amount"
+        >Enter your bill amount: <input type="number" id="bill-amount" class="bill-input" required
+      /></label>
+      <label for="guests" id="guests"
+        >How many guests are paying?<select id="guests" class="select-guests">
+          <option value="1">1</option>
+          <option value="1">2</option>
+          <option value="1">3</option>
+          <option value="1">4</option>
+          <option value="1">5</option>
+          <option value="1">6</option>
+          <option value="1">7</option>
+          <option value="1">8</option>
+          <option value="1">9</option>
+        </select></label
+      >
+      <div class="tip-container">
+        <label for="tip-size">Enter your tip percentage:</label>
+        <div class="btn-container">
+        <button class="tip-btn">5%</button>
+        <button class="tip-btn">10%</button>
+        <button class="tip-btn">15%</button>
+        <button class="tip-btn">20%</button>
+        </div>
+        <label for="custom" id="custom"
+          >Enter a custom percentage: <input type="number"
+        /></label>
+      </div>
+
+      <button type="submit">Calculate Tip</button>
+    </form>
+
+    <div class="results-container">
+      <div class="tip-result">Your Tip:</div>
+      <div class="total">Your Total:</div>
+    </div>
+  </body>
+</html>
