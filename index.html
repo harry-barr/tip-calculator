@@ -13,11 +13,11 @@
     </div>
     <form class="tip-form">
       <label for="bill-amount" id="bill-amount"
-        >Enter your bill amount: <input type="number" id="bill-amount" class="bill-input" required
+        >Enter your bill amount: <input type="number" id="bill-amount" class="bill-input" min="1" required
       /></label>
       <label for="guests" id="guests"
         >How many guests are paying?<select id="guests" class="select-guests">
-          <option value=""></option>
+         
           <option value="1" class="option-guests" selected>1</option>
           <option value="2" class="option-guests">2</option>
           <option value="3" class="option-guests">3</option>
@@ -48,6 +48,7 @@
     <div class="results-container">
       <div class="tip-result">Your Tip:</div>
       <div class="total-result">Your Total:</div>
+      <div class="divide-result hide"></div>
     </div>
   </body>
   <script type="module" src="script.js"></script>

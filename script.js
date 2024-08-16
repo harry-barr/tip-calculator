@@ -2,11 +2,10 @@ const billInput = document.querySelector(".bill-input");
 const submitBtn = document.querySelector(".submit-btn");
 const tipAmountBtns = document.querySelectorAll(".tip-btn");
 const guestNumber = document.querySelector(".select-guests");
-const optionGuest = document.querySelector(".option-guests");
 const tipResult = document.querySelector(".tip-result");
 const totalResult = document.querySelector(".total-result");
-
-let tipMultiplier = 0;
+const dividedResult = document.querySelector(".divide-result");
+const customTipInput = document.querySelector(".custom-tip");
 
 tipAmountBtns.forEach((button) => {
   button.addEventListener("click", (event) => {
@@ -19,13 +18,26 @@ const calculateTip = (event) => {
   event.preventDefault();
   tipResult.innerHTML = "Your Tip:";
   totalResult.innerHTML = "Your Total:";
+  dividedResult.innerHTML = "";
   let amount = Number(billInput.value);
-  tipMultiplier = document.querySelector(".tip-btn.active").value;
+  let tipMultiplier = document.querySelector(".tip-btn.active")?.value;
+
+  let tip = amount * tipMultiplier;
+  let total = amount + tip;
+
+  let dividedAmount = total / Number(guestNumber.value);
   if (isNaN(amount) || amount <= 0 || !tipMultiplier) {
     return alert("Please enter a valid number and select a tip percentage.");
-  } else if ((optionGuest.value = 1)) {
-    let tip = amount * tipMultiplier;
-    let total = amount + tip;
+  } else if (Number(guestNumber.value) === 1) {
+    tipResult.insertAdjacentHTML("beforeend", `<p>${tip.toFixed(2)}</p>`);
+    totalResult.insertAdjacentHTML("beforeend", `<p>${total.toFixed(2)}</p>`);
+    return;
+  } else if (Number(guestNumber.value) > 1) {
+    dividedResult.classList.remove("hide");
+    dividedResult.insertAdjacentHTML(
+      "beforeend",
+      `Amount per person: <p>${dividedAmount.toFixed(2)}</p>`
+    );
     tipResult.insertAdjacentHTML("beforeend", `<p>${tip.toFixed(2)}</p>`);
     totalResult.insertAdjacentHTML("beforeend", `<p>${total.toFixed(2)}</p>`);
     return;

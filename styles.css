@@ -81,18 +81,19 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
   font-size: 2rem;
   background-color: aliceblue;
-  border: none;
   color: black;
   cursor: pointer;
+  position: static;
+  border-color: transparent;
 }
 
 .tip-container .btn-container .tip-btn:hover {
-  border: 4px solid #019f55;
+  border: 3px solid #019f55;
 }
 
 .active {
   background-color: #07517e !important;
-  border: 4px solid #019f55 !important;
+  border: 3px solid #019f55 !important;
   color: #019f55 !important;
 }
 
@@ -132,9 +133,14 @@ form .submit-btn:hover {
   font-weight: 600;
 }
 .results-container .tip-result,
-.results-container .total-result {
+.results-container .total-result,
+.results-container .divide-result {
   margin: 20px;
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.hide {
+  display: none !important;
 }
